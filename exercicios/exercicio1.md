@@ -81,6 +81,39 @@ d) Quanto vai sobrar após a divisão?<br>
 
 *Escreva o código em PHP da solução.*
 
+```php
+  <?php
+  $valorAplicado = 10000;
+  $rendimentoMes = 0.005;
+  $tempoAplicadoEmMeses = 3;
+
+
+  $valorRendido = $valorAplicado;
+
+  echo "<strong>A)</strong> <br>";
+  for ($i = 1; $i <= $tempoAplicadoEmMeses; $i++) {
+    $valorRendido = $valorRendido + $valorRendido * $rendimentoMes;
+    echo "<strong>Valor de dividendos no ${i}° mês:</strong> R$" . round($valorRendido - $valorAplicado, 2) . "<br>";
+  }
+
+  echo "<br><strong>B)</strong> <br>";
+  echo "<strong>Saldo da aplicação após ${tempoAplicadoEmMeses} meses:</strong> R$" . round($valorRendido, 2) . "<br>";
+
+  $resto = round(fmod($valorRendido, 100), 2);
+  $notasParaCadaCalc = ((round($valorRendido, 2) - round($resto, 2)) / 100) / 3;
+  $notasParaCada = (int)$notasParaCadaCalc;
+  $totalDeNotas = ((round($valorRendido, 2) - round($resto, 2)) / 100);
+  $notasQueSobraram = $totalDeNotas - $notasParaCada * 3;
+  $valorQueSobrou = $notasQueSobraram * 100;
+
+  echo "<br><strong>C)</strong> <br>";
+  echo "Serão <strong>$notasParaCada</strong> notas de R$100 para cada. Equiv: R$" . $notasParaCada * 100 . ".<br>";
+
+  echo "<br><strong>D)</strong> <br>";
+  echo "<strong>Sobrou:</strong>  R$" . round($valorQueSobrou + $resto, 2);
+  ?>
+```
+
 ### 13. Escreva um programa em PHP que resolva equação de 2º grau. Calcular delta antes. A função para calcular raízes é sqrt($delta). Não se esqueça que a saída produz duas raízes x1 e x2 para delta positivo.
 ```php
 
