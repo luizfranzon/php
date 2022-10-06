@@ -159,3 +159,10 @@ echo $txt1 . "<br>"; echo $txt2 . "<br>";
 echo $txt1 . $txt2 . "<br>"; $txt1 .= $txt2;
 echo $txt1 . "<br>";
 ```
+Resultado =>
+```txt
+coisa
+boa
+coisaboa
+coisaboa
+```
