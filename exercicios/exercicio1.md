@@ -29,9 +29,9 @@ Na pasta htdocs
 ### 5. Marque a alternativa correta correspondente às marcas de abertura e fechamento de um programa PHP:
 
 ```txt
-(X) <body> </body>
+( ) <body> </body>
 ( ) <php> </php>
-(X) <html> </html>
+( ) <html> </html>
 (X) <?php ?>
 ( ) <?php /php>
 ```
