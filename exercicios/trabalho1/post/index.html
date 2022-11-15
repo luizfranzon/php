@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário POST</title>
+
+  <style>
+
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      font-size: 2rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 8px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>Formulário POST</h1>
+  <form action="./form.php" method="POST">
+    <div class="field">
+      <label for="Nome">Nome:</label>
+      <input type="text" name="nome" id="Nome">
+    </div>
+    <div class="field">
+      <label for="Idade">Idade:</label>
+      <input type="number" name="idade" id="Idade">
+    </div>
+    <div class="field">
+      <label for="Rua">Rua:</label>
+      <input type="text" name="rua" id="Rua">
+    </div>
+    <div class="field">
+      <label for="Cidade">Cidade:</label>
+      <input type="text" name="cidade" id="Cidade">
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+
+<!-- NOME IDADE RUA CIDADE -->
